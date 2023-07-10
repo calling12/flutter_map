@@ -55,6 +55,12 @@ class _loginState extends State<SignUp> {
                 color: Colors.black38,
               ),
             ),
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return "ກະລຸນາປ້ອນ E-mail";
+              }
+              return null;
+            },
           ),
         )
       ],
@@ -87,23 +93,29 @@ class _loginState extends State<SignUp> {
                 )
               ]),
           height: 60,
-          // child: TextFormField(
-          //   keyboardType: TextInputType.text,
-          //   obscureText: true,
-          //   style: TextStyle(color: Colors.black87),
-          //   decoration: InputDecoration(
-          //     border: InputBorder.none,
-          //     contentPadding: EdgeInsets.only(top: 14),
-          //     prefixIcon: Icon(
-          //       Icons.lock,
-          //       color: Color(0xff5ac18e),
-          //     ),
-          //     hintText: 'Plassword',
-          //     hintStyle: TextStyle(
-          //       color: Colors.black38,
-          // ),
-          // ),
-          // ),
+          child: TextFormField(
+            keyboardType: TextInputType.text,
+            obscureText: true,
+            style: TextStyle(color: Colors.black87),
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              contentPadding: EdgeInsets.only(top: 14),
+              prefixIcon: Icon(
+                Icons.lock,
+                color: Color(0xff5ac18e),
+              ),
+              hintText: 'Plassword',
+              hintStyle: TextStyle(
+                color: Colors.black38,
+              ),
+            ),
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return "ກະລຸນາປ້ອນ Password";
+              }
+              return null;
+            },
+          ),
         )
       ],
     );
@@ -141,16 +153,17 @@ class _loginState extends State<SignUp> {
             obscureText: true,
             style: TextStyle(color: Colors.black87),
             decoration: InputDecoration(
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.only(top: 14),
-                prefixIcon: Icon(
-                  Icons.lock,
-                  color: Color(0xff5ac18e),
-                ),
-                hintText: 'Confirm Plassword',
-                hintStyle: TextStyle(
-                  color: Colors.black38,
-                )),
+              border: InputBorder.none,
+              contentPadding: EdgeInsets.only(top: 14),
+              prefixIcon: Icon(
+                Icons.lock,
+                color: Color(0xff5ac18e),
+              ),
+              hintText: 'Confirm Plassword',
+              hintStyle: TextStyle(
+                color: Colors.black38,
+              ),
+            ),
           ),
         )
       ],
